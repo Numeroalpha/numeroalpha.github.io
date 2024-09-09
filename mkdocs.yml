@@ -1,0 +1,89 @@
+site_name: Numeroalpga
+site_url: https://numeroalpha.github.io/
+
+# Repository
+repo_name: numeroalpha.github.io
+repo_url: https://github.com/Numeroalpha/numeroalpha.github.io/tree/main
+edit_uri: edit/main/docs/
+
+nav:
+- index.md
+- Design:
+  - Design/highLevelArch.md.md
+- Scrum:
+  - Scrum Day: 
+  - Retro:
+    
+
+- Documentation:
+  
+
+- Concepts:
+  
+- Onboarding:
+  - Onboarding: setup/backend.md
+
+  
+- Root Cause Analysis:
+ 
+
+theme:
+  favicon: assets/favicon.png
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+  font:
+    code: Roboto Mono
+    text: Roboto
+  icon:
+    logo: logo
+    repo: fontawesome/brands/github
+  name: material
+  custom_dir: overrides
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark
+
+plugins:
+  - search
+  - table-reader
+  - tags:
+      tags_file: concepts/index.md
+
+extra_javascript:
+  - javascripts/openLinksBySearchStrings.js
+
+markdown_extensions:
+    - abbr
+    - admonition
+    - attr_list
+    - footnotes
+    - pymdownx.tabbed
+    - pymdownx.details
+    - pymdownx.snippets:
+        auto_append:
+            - includes/abbreviations.md
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+docs_dir: docs
+site_dir: docs-gen
